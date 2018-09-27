@@ -41,7 +41,12 @@ hbs.registerHelper('screamIt', text => {
 });
 
 app.get('/', (req, res) => {
-  res.send('<h1>Hello express !!</h1>');
+  // res.send('<h1>Hello express !!</h1>');
+  res.render('home.hbs', {
+    pageTitle: 'Home page',
+    welcomeMessage: 'Welcome to Home Page...'
+    // currentYear: new Date().getFullYear()
+  });
 });
 
 /// hbs view dynamic call
